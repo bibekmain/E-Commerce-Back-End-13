@@ -14,9 +14,8 @@ router.get('/', (req, res) => {
   .catch((err) => res.json(err));
 });
 
+// find a single tag by its `id`
 router.get('/:id', (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
   Tag.findOne({
     where: {
       id: req.params.id

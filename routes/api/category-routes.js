@@ -22,15 +22,25 @@ router.get('/:id', (req, res) => {
   .catch((err) => res.json(err));
 });
 
+// create a new category
 router.post('/', (req, res) => {
-  // create a new category
+  /*
+  {
+    "category_name": "new_category_name"
+  }
+  */
   Category.create(req.body)
   .then((data) => res.json(data))
   .catch((err) => res.json(err));
 });
 
+// update a category by its `id` value
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
+  /*
+  {
+    "category_name": "new_category_name"
+  }
+  */
   Category.update(req.body, {
     where: {
       id: req.params.id
@@ -39,8 +49,8 @@ router.put('/:id', (req, res) => {
   .catch((err) => res.json(err));
 });
 
+// delete a category by its `id` values
 router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
   Category.destroy({
     where: {
       id: req.params.id

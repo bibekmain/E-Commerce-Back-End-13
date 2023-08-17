@@ -23,7 +23,9 @@ The E-Commerce Back-End application offers basic functionality for managing prod
 - First fork/download the repository by going to [this](https://github.com/bibekmain/E-Commerce-Back-End-13) link
 - Make sure you have MySql installed and setup
 - Go to the application's directory and run `npm i` to install all the required packages
-- Then create a `.env` file to enter your `DB_NAME`, `DB_USER`, and `DB_PASSWORD`. Generally the DB_USER is `root` and DB_PASSWORD is your own MySql password.
+- Then create a `.env` file to enter your `DB_NAME`, `DB_USER`, and `DB_PASSWORD`. Here is what the file should look like:  
+![.env file example](https://github.com/bibekmain/E-Commerce-Back-End-13/blob/main/assets/env.png?raw=true)  
+Set the `DB_PASSWORD` to your own MySql password.
 
 - To run the seed run `mysql -uroot -p` and enter your password
 - Then run `source db/schema.sql;` to run the schema for the application's database
